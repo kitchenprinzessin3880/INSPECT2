@@ -1,19 +1,14 @@
-Old/outdated dependencies are not deployed in 52n Maven repositories. Due to a current 
-refactoring phase it is not intended to do this (yet). However, these dependencies lay 
-in a project related file repository which will be installed in your local Maven
-repository during project's install phase.
+INSPECT is an online quality flagging tool developed based on 52N Sensor Web Client 3.1 (http://52north.org/communities/sensorweb/clients/SensorWebClient/).
 
-The Sensor Web Client project relies heavily on the 52n-oxf framework which also stands 
-before a refactoring phase. To install its old/outdated dependencies, you have to check 
-it out and install the project (with its dependencies) manually.
+I have extended the existing client with a data inspection module that allows users to visually assess and flag the data series retrieved via several SOS.
+The observation services access data from the TERENO database.
 
-0) Checkout + mvn install
-  https://svn.52north.org/svn/swe/incubation/ox-framework-2.0/52n-oxf/trunk/
+The flagging tool uses data access control information to allow certain operations (e.g., view series, flagging and data approval)
+based on the user roles and the user groups. A Web Processing Service based
+on the 52°North WPS (http://52north.org/communities/geoprocessing/wps/) implementation has been developed. The WPS is used to gather more detailed information about the quality descriptors and the
+history of a station, to update flagging information, and to approve data release.
 
-1) Checkout + mvn install
-  https://svn.52north.org/svn/swe/main/Clients/SensorWebClient/trunk/
-  
+Installation/Debugging info: INSPECT2/misc/InstallationInfo.pdf
 
-Optionally:
-n) XML Bindings (available from 52n Maven repository)
-  https://svn.52north.org/svn/swe/incubation/ox-framework-2.0/52n-common-xml/trunk/
+User Manual : INSPECT2/misc/Manual_INSPECT5.docx
+
