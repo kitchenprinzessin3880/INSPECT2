@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="sensorwebclient-webapp">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/"/>
+        <dependent-module archiveName="sensorwebclient-api-3.1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sensorwebclient-api/sensorwebclient-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="sensorwebclient-sos-shared-3.1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sensorwebclient-sos-shared/sensorwebclient-sos-shared">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="xml-pdf-format-3.1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/xml-pdf-format/xml-pdf-format">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="sensorwebclient-ui-3.1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sensorwebclient-ui/sensorwebclient-ui">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="sensorwebclient-sos-rpc-3.1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sensorwebclient-sos-rpc/sensorwebclient-sos-rpc">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="sensorwebclient-ext-3.1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sensorwebclient-ext/sensorwebclient-ext">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="sensorwebclient-sos-server-3.1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sensorwebclient-sos-server/sensorwebclient-sos-server">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="sensorwebclient-webapp"/>
+        <property name="java-output-path" value="/sensorwebclient-webapp/target/sensorwebclient-webapp/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

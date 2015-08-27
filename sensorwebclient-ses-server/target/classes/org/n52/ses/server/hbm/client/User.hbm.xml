@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="org.n52.shared.serializable.pojos">
+	<class name="User" table="sesclient_user">
+		<id name="id" column="id">
+			<generator class="sequence">
+				<param name="sequence">user_id_seq</param>
+			</generator>
+		</id>
+		<property name="userName" type="string" />
+		<property name="name" type="string" />
+		<property name="password" type="string" />
+		<property name="eMail" type="string" />
+		<property name="registerID" type="string"/>
+		<property name="wnsSmsId" type="string"/>
+		<property name="wnsEmailId" type="string"/>
+		<property name="role" lazy="false">
+			<type name="org.n52.server.ses.hibernate.EnumType">
+				<param name="enumClassName">
+					org.n52.shared.serializable.pojos.UserRole
+				</param>
+			</type>
+		</property>
+		<property name="date" type="timestamp"/>
+		<property name="falseLoginDate" type="timestamp"/>
+		<property name="falseLoginCount" type="integer"/>
+		<property name="active" type="boolean"/>
+		<property name="activated" type="boolean" />
+		<property name="emailVerified" type="boolean" />
+		<property name="passwordChanged" type="boolean" />
+	</class>
+</hibernate-mapping>

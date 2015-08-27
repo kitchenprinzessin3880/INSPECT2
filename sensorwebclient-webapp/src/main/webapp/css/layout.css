@@ -1,0 +1,479 @@
+.n52_sensorweb_client_imagebutton {
+  margin: 3px;
+  width: 22px;
+  height: 22px;
+}
+/*
+kuler.adobe.com, base color #55B0BD, monochromatic
+
+text: #2E3B3D
+background: #3F8589 (legendentry)
+border: #1C393D (buttons), #96C2C8 (layouts)
+foreground: #A3D3D6 (buttons)
+hover: #3E818A
+links: #3F8589
+*/
+body {
+  background: white;
+  text-align: center;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0px;
+}
+#spacer {
+  height: 45%;
+  overflow: hidden;
+}
+#loadingWrapper {
+  overflow: hidden;
+  margin: 0px auto;
+  width: 170px;
+  background: white;
+  text-align: left;
+}
+#loadingMsg {
+  font-size: 7pt;
+  font-weight: normal;
+  font-family: tahoma, arial, sans-serif;
+}
+#operator {
+  font-size: 8pt;
+  font-weight: bold;
+  font-family: tahoma, arial, sans-serif;
+}
+.n52_sensorweb_client_main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/*****************************
+* buttonstyling 
+*/
+.n52_sensorweb_client_jumpToTodayButton,
+.n52_sensorweb_client_gridButton,
+.n52_sensorweb_client_scaleButton,
+.n52_sensorweb_client_interactionbutton,
+.n52_sensorweb_client_legendbutton,
+.n52_sensorweb_client_legendbuttonDisabled,
+.n52_sensorweb_client_legendbuttonPrimary {
+  background-color: #A5C0D3;
+  border-width: 1px;
+  border-style: solid;
+  border-color:#015d9e;
+  border-radius: 4px;
+  height: 23px;
+  color: black;
+}
+
+.n52_sensorweb_client_legendbuttonPrimary {
+  background-color: #A5C0D3;
+}
+.n52_sensorweb_client_jumpToTodayButton,
+.n52_sensorweb_client_gridButton,
+.n52_sensorweb_client_scaleButton,
+.n52_sensorweb_client_legendbutton,
+.n52_sensorweb_client_legendbuttonPrimary,
+.n52_sensorweb_client_legendbuttonDisabled {
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 23px;
+  text-align: center;
+}
+.n52_sensorweb_client_legendbuttonDisabled {
+  filter: alpha(opacity = 30);
+  opacity: 0.3;
+  cursor: default;
+}
+.n52_sensorweb_client_scaleButtonSelected,
+.n52_sensorweb_client_jumpToTodayButton:HOVER,
+.n52_sensorweb_client_gridButton:HOVER,
+.n52_sensorweb_client_scaleButton:HOVER,
+.n52_sensorweb_client_legendbutton:HOVER,
+.n52_sensorweb_client_legendbuttonPrimary:HOVER,
+.n52_sensorweb_client_interactionbutton:HOVER {
+  background-color: #c9d9e4;
+  border: 1px solid #A5C0D3;
+}
+.n52_sensorweb_client_legendbuttonText {
+  cursor: pointer;
+}
+.n52_sensorweb_client_arrowDown {
+  background: url("../img/icons/expander.png");
+  background-repeat: no-repeat;
+  padding-left: 5px;
+}
+.n52_sensorweb_client_smallicon {
+  padding: 1px;
+  filter: alpha(opacity = 100);
+  opacity: 1;
+  border: 1px solid #1c393d;
+  border-radius: 3px 3px 3px 3px;
+}
+.n52_sensorweb_client_smallicon:HOVER {
+  filter: alpha(opacity = 100);
+  opacity: 1;
+  border: 1px solid #015d9e;
+  background-color: #A5C0D3;
+  cursor: pointer;
+}
+.n52_sensorweb_client_noOpacitiy {
+  opacity: 1;
+  filter: alpha(opacity = 100);
+}
+.n52_sensorweb_client_legendlink {
+  color: #015d9e;
+  font-size: 11px;
+}
+.n52_sensorweb_client_legendlink:HOVER {
+  color: #6C6C6C;
+  opacity: 1;
+  filter: alpha(opacity = 100);
+  cursor: pointer;
+}
+.n52_sensorweb_client_interactionmenu_custom {
+  background-color: white;
+  border: 3px solid;
+  border-color: #A5C0D3;
+  border-radius: 2px;
+}
+.n52_sensorweb_client_interactionmenu {
+  background-color: #c9d9e4;
+  border: 3px solid;
+  border-color: #c9d9e4;
+  border-radius: 2px;
+}
+.n52_sensorweb_client_interactionmenuHeader {
+  background-color: #A5C0D3;
+  font-size: 12px;
+  font-weight: bold;
+}
+.n52_sensorweb_client_exportEntry {
+  font-size: 10px;
+  padding-top: 2px;
+}
+.n52_sensorweb_client_exportEntry:HOVER {
+  cursor: pointer;
+  background-color: #A5C0D3;
+}
+/* Styling for the sensor info table */
+table.sensorInfo {
+  font-size: 10px;
+}
+tr.sensorInfo:nth-child(2n) {
+  background-color: #A5C0D3;
+}
+tr.sensorInfo:hover {
+  background-color: #015d9e;
+}
+.n52_sensorweb_client_create_abo_form_content {
+  float: left;
+  margin: 1em;
+}
+.n52_sensorweb_client_create_abo_form_content .formTitle,
+.n52_sensorweb_client_create_abo_form_content .formTitleFocused {
+  white-space: nowrap;
+  margin-bottom: 1em;
+}
+.n52_sensorweb_client_abo_name_textbox {
+  width: 100%;
+}
+table.n52_sensorweb_client_create_abo_metadata_table {
+  margin: 1em;
+  width: 100%;
+}
+table.n52_sensorweb_client_create_abo_metadata_table tr:nth-child(2n) {
+  background-color: #A5C0D3;
+}
+/*
+table.n52_sensorweb_client_create_abo_metadata_table tr:hover {
+    background-color: @bg-color-hover;
+}
+*/
+.n52_sensorweb_client_create_abo_context_help {
+  float: right;
+  border-left: #ffb;
+  width: 150px;
+}
+.n52_sensorweb_client_headerContainer {
+  width: 100%;
+  height: 100%;
+  background-repeat:no-repeat;
+}
+
+.n52_sensorweb_client_logoBlock {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.n52_sensorweb_client_logo {
+  margin-left: 15px;
+  cursor: pointer;
+}
+.n52_sensorweb_client_linkBlock {
+  left: 750px;
+  margin-top: 30px;
+}
+.n52_sensorweb_client_header{
+  color: #015d9e;
+  font-size: 12px;
+  text-decoration: none;
+}
+.n52_sensorweb_client_headerlink {
+  color: #015d9e;
+  font-size: 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.n52_sensorweb_client_headerlink:hover {
+  color: #6C6C6C;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.n52_sensorweb_client_pipe {
+  color: #013f6b;
+  font-size: 10px;
+  text-decoration: none;
+  padding-left: 3px;
+  padding-right: 3px;
+  cursor: default;
+}
+div .n52_sensorweb_client_imprint_content {
+  background-color: white;
+  width: 450;
+  height: 460;
+  padding: 1em 1em 1em 1em;
+  text-align: left;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clear-float {
+  clear: both;
+}
+#editor > * > address {
+  border-left: 0.5em solid;
+  padding-left: 0.5em;
+  border-color: #f6f6f6;
+}
+.n52_sensorweb_client_legend {
+  background-color: #FFFFFF;
+}
+.n52_sensorweb_client_legendEntryLayout {
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 2px;
+  overflow: scroll;
+}
+.n52_sensorweb_client_legendEntryHeader {
+  background-color: #ffffff;
+  cursor: pointer;
+  border: 2px solid #A5C0D3;
+}
+.n52_sensorweb_client_legendEntryTitle {
+  margin: 7px 0px 0px 7px;
+  padding-left: 10px;
+  overflow: hide;
+  font-size: 8pt;
+  font-weight: bold;
+}
+.n52_sensorweb_client_legendEntryHeaderSelected {
+  background-color: #A5C0D3;
+  cursor: pointer;
+  border: 2px solid #A5C0D3;
+}
+.n52_sensorweb_client_legendEntryHeaderText {
+  font-size: 8pt;
+  color: #015d9e;
+  font-weight: bold;
+}
+.n52_sensorweb_client_legendEntryHeaderTextSelected {
+  font-size: 8pt;
+  color: #015d9e;
+  font-weight: bold;
+}
+.n52_sensorweb_client_legendEntryHeaderSelectedNoData {
+  background-color: #A5C0D3;
+  cursor: pointer;
+}
+.n52_sensorweb_client_legendEntryHeaderNoData {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.n52_sensorweb_client_legendEntryHeader option:hover {
+  cursor: pointer;
+}
+.n52_sensorweb_client_legendEntryFooter {
+  width: inherit;
+  background-color: #ffffff;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  border-left: 2px solid #A5C0D3;
+  border-right: 2px solid #A5C0D3;
+  border-bottom: 2px solid #A5C0D3;
+}
+.n52_sensorweb_client_legendEntryFooterNoData {
+  width: inherit;
+  background-color: #ffffff;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+.n52_sensorweb_client_legendEntryFooterSelected {
+  width: inherit;
+  background-color: #ffffff;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+.n52_sensorweb_client_legendEntryFooterSelectedNoData {
+  width: inherit;
+  background-color: #ffffff;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+.n52_sensorweb_client_legendEntryFooterCollapse {
+  visibility: collapse;
+}
+.n52_sensorweb_client_legendEntryTitleColorIndicator {
+  width: 16px;
+  height: 6px;
+  margin: 0px 10px 0px 4px;
+}
+.n52_sensorweb_client_legendEntryTitleColorIndicatorSmall {
+  margin: 7px 0px 0px 7px;
+  text-align: center;
+}
+.n52_sensorweb_client_legendInfoRow {
+  padding-top: 3px;
+  font-size: 11px;
+}
+.n52_sensorweb_client_legendHider {
+  /*background-color: #A5D6D6;*/
+
+  cursor: pointer;
+}
+.n52_sensorweb_client_legendHider:Hover {
+  /*background-color: @text-color-font;*/
+
+}
+.n52_sensorweb_client_splitbar {
+  /*background-color: #A5D6D6;
+    color: @text-color-font;*/
+
+}
+.n52_sensorweb_client_refValLayout {
+  padding-top: 3px;
+  margin-top: 5px;
+}
+div .n52_sensorweb_client_options_button img {
+  width: 36px;
+  height: 36px;
+}
+.n52_sensorweb_client_diagramInteractionMenu {
+  margin: 5px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #015d9e;
+}
+.n52_sensorweb_client_jumpToTimeIntervalForm {
+  font-size: 11px;
+  font-weight: bold;
+}
+.n52_sensorweb_client_scaleButtonLayout,
+.n52_sensorweb_client_gridButtonLayout {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.n52_sensorweb_client_scaleButton,
+.n52_sensorweb_client_gridButton {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.n52_sensorweb_client_tooltip {
+  font-size: 12px;
+  font-family: sans-serif;
+}
+.n52_sensorweb_client_stationselectormap {
+  width: 950px;
+  height: 560px;
+}
+.n52_sensorweb_client_loadingSpinner {
+  padding-top: 20px;
+  visibility: hidden;
+}
+.n52_sensorweb_client_marker {
+  cursor: pointer;
+}
+.n52_sensorweb_client_toasterMsg {
+  font-size: 8pt;
+  color: black;
+}
+.n52_sensorweb_client_toasterErrorMsg {
+  font-size: 8pt;
+  color: red;
+}
+.n52_sensorweb_client_dataControls {
+  border-right: 1px solid #C0C3C7;
+}
+.n52_sensorweb_client_mainLayout {
+  background-color: #c9d9e4;
+  border: 1px solid #0C374C;
+  margin: 0px;
+  padding: 0px;
+}
+.n52_sensorweb_client_stationPicker {
+  background-color: #c9d9e4;
+}
+.n52_sensorweb_client_controlLabel {
+  /*padding-top: 3px;*/
+
+  font-size: 8pt;
+  color: #015d9e;
+}
+.n52_sensorweb_client_legendAddBox {
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+.n52_sensorweb_client_legendAddBoxLabel {
+  font-size: 11pt;
+}
+.n52_sensorweb_client_topButtons {
+  padding: 0px 0px 0px 8px;
+}
+.n52_sensorweb_client_modalWindow {
+  width: 950px;
+  height: 550px;
+}
+
+/* stock list header row */
+.qualityTableHeader {
+  width:15em;
+  text-align: left;
+}
+
+/*ASD*/
+.tereno_queryListHeader {
+  background-color: #A5C0D3;
+}
+
+.tereno_queryList {
+  border: 1px solid silver;
+  padding: 2px;
+  margin-bottom:6px;
+}
+.tereno_RemoveQueryColumn {
+  text-align: center;
+}
+
+.tereno_propColumn {
+    width: 130px;
+}
+
+
